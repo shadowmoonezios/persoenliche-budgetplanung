@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 // Datenbankverbindung
-mongoose.connect('mongodb://localhost:27017/persoenliche-budgetplanung', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/persoenliche-budgetplanung', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
