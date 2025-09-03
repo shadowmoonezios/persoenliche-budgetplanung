@@ -10,7 +10,8 @@ app.use(cors());
 app.use(express.json());
 
 // Database connection
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/personal-budget-planning', {
+const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/personal-budget-planning';
+mongoose.connect(mongoURI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
