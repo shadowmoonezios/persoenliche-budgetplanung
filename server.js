@@ -15,7 +15,7 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/persoenli
   useUnifiedTopology: true
 })
 .then(() => console.log('MongoDB verbunden'))
-.catch(err => console.error('MongoDB Verbindung error:', err));
+.catch(err => console.error('MongoDB Verbindungsfehler:', err));
 
 // Beispiel-Route
 app.get('/', (req, res) => {
